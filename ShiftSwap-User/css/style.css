@@ -50,7 +50,7 @@ header {
 }
 .header-brand {
 	font-weight:bold;
-	font-size:2.3em;
+	font-size:1.8em;
 	color:white;
 	margin-left:36px;
 }
@@ -236,7 +236,7 @@ header {
 	
 	.filter {
 		display: inline-block;
-		margin: 16px 8px;
+		margin:5px;
 	}
 	.filter-button {
 		
@@ -245,7 +245,7 @@ header {
 
 @media (min-width: 1020px)
 {
-	.filter{margin:16px}
+	.filter{margin:12px}
 }
 
 
