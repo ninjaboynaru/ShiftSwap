@@ -1,0 +1,251 @@
+/*
+	Mobile First
+
+	CORE COLORS
+	Dark Blue: #3B5998
+	Light Blue: #4FAFE4;
+	Grayed Title: #757575;
+
+	MAJOR BREAK POINTS
+	min-width 960px
+	
+	MINOR BREAK POINTS
+	min-width 1020px
+	
+*/
+
+
+/*
+* BASE
+*/
+html, body {
+	width:100%;
+	margin:0;
+	padding:0;
+}
+html { height:100% }
+body { min-height:100%; position:relative; font-family:helvetica, sans-serif; background-color:#E9EBEE; }
+
+*, *:before, *:after, html, body {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+a {text-decoration:none; color:black}
+button { border:none }
+
+
+
+/*
+* STATICS
+*/
+header {
+	position: fixed;
+	top:0;
+	z-index:3;
+	width: 100%;
+	padding: 20px 10px;
+	padding-top:0;
+	background-color: #3B5998;
+}
+.header-brand {
+	font-weight:bold;
+	font-size:2.3em;
+	color:white;
+	margin-left:36px;
+}
+.header-icon {
+	font-size:1.5em;
+	padding:4px 16px;
+}
+.footer {
+	width: 100%;
+	background-color: #3b5998;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100px;
+	color: white;
+	padding: 16px;
+}
+
+
+
+/*
+* MODULE
+*/
+
+/*---- BUTTONS ----*/
+.btn { display:inline-block; border-radius:4px; }
+.btn:hover{ cursor:pointer }
+
+.btn-large {
+	padding:8px 30px;
+	font-size:1em;
+}
+.btn-small { padding: 6px 16px }
+
+.btn-white {
+	color:#3B5998;
+	background-color:white;
+	border:1px solid white;
+}
+.btn-white:hover { color:white; background-color:#3B5998; border:1px solid white }
+
+.btn-light-blue {
+	color:black;
+	background-color:#4FAFE4;
+}
+.btn-light-blue:hover { color:white; background-color:#3B5998 }
+
+.btn-standard {
+	color:#333;
+	background-color:white;
+	border:1px solid #ccc;
+}
+.btn-standard:hover {
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+
+/*---- CONTAINERS ----*/
+.main-container {
+	margin-top:120px;
+	padding:16px;
+	padding-bottom:116px;
+}
+.filter-container {
+	border-bottom: 2px solid white;
+	margin-bottom: 11px;
+}
+.shifts-container {
+	text-align:center;
+}
+
+
+/*---- SHIFT ELEMENT ----*/
+.shift {
+	max-width: 460px;
+	margin:10px auto;
+	border: 1px solid #bdbdbd;
+	border-radius: 4px;
+	background-color: white;
+}
+.shift-heading {
+	width:100%;
+	background-color: white;
+	border-radius: 16px;
+	padding: 10px 0px;
+	text-align: center;
+}
+.shift-body {
+	width:100%;
+	padding:16px 16px 0 16px;
+	margin-top:10px;
+	text-align:left;
+	border:none;
+	border-top:1px solid #ccc;
+}
+
+.shift-inline-info {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: consolas, monospace;
+	padding: 0 4%;
+	border: 1px black;
+}
+.shift-exchange {
+	border-right-style: solid;
+}
+.shift-date {
+	border-right-style: solid;
+}
+.shift-time {
+	word-spacing: -8px;
+}
+.shift-link {
+
+}
+.shift-message {
+	line-height: 1.4;
+}
+
+
+/*---- FILTER ELEMENT ----*/
+.filter {
+	margin-top:24px;
+	margin-bottom:24px;
+}
+.filter-button {
+	
+}
+.filter-title {
+	color:white;
+	margin:0;
+	font-style:italic;
+	font-weight:bold;
+}
+
+
+/*---- OTHER ----*/
+.white {
+	color:white;
+}
+.title-light {
+	margin: 0;
+	color: #757575;
+}
+.title-margins {
+	margin-top:16px;
+	margin-bottom:16px;
+}
+.credits {
+	color: #efefef;
+	font-family: consolas;
+	font-size:0.8em;
+}
+
+
+/*
+* QUERIES
+*/
+@media (max-width: 959px)
+{
+	.hide-onsmall {
+		display:none;
+	}
+}
+@media (min-width: 960px)
+{
+	.hide-onlarge {
+		display:none;
+	}
+	.main-container {
+		margin-top:220px;
+	}
+	
+	.shift {
+		display:inline-block;
+		width:50%;
+		margin:16px 8px;
+	}
+	.shift-body {
+		display:block !important;
+	}
+	
+	.filter {
+		display: inline-block;
+		margin: 16px 8px;
+	}
+	.filter-button {
+		
+	}
+}
+
+@media (min-width: 1020px)
+{
+	.filter{margin:16px}
+}
+
+

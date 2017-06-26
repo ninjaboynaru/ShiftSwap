@@ -1,0 +1,149 @@
+/*
+	Mobile First Design
+	
+	CORE COLORS
+	Dark Blue: #3B5998
+	Light Blue: #4FAFE4
+*/
+
+
+
+
+html, body {
+	width:100%;
+	margin:0;
+	padding:0;
+	font-family: Helvetica, sans-serif;
+}
+
+a { text-decoration:none }
+
+
+
+/*
+* STATICS
+*/
+header {
+	background-color:#3B5998;	
+	padding:20px 10px;
+}
+
+.header-brand {
+	font-weight:bold;
+	font-size:1.3em;
+	color:white;
+}
+.nav {
+	
+}
+.nav-link {
+	margin: 16px 0;
+}
+
+.footer {
+	width: 100%;
+	background-color: #3b5998;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	color: white;
+	padding: 16px;
+}
+
+
+/*
+* MODULE
+*/
+
+/*---- CLEARFIX ----*/
+.clearfix:before, .clearfix:after, {
+	display:block;
+	content:"";
+}
+.clearfix:after { clear:both }
+.clearfix { zoom:1 }
+
+
+.container-main {
+	margin:20px 20px;
+}
+
+/*---- OTHERS ----*/
+.text-showcase {
+	max-width:680px;
+	max-height:600px;
+	min-height:30px;
+	padding:16px;
+	overflow-y:auto;
+	/* word-break: break-all; */
+	
+	font-family:consolas;
+	font-size:1.1em;
+	border-radius:6px;
+	border:3px solid black;
+}
+.title-showcase {
+	margin-bottom:4px;
+	margin-left:16px;
+	font-family:consolas;
+	font-style:italic;
+}
+.credits {
+	color: #efefef;
+	font-family: consolas;
+	font-size:0.8em;
+}
+
+/*---- BUTTONS ----*/
+.btn {
+	cursor:pointer;
+	display:inline-block;
+}
+.btn-main {
+	font-size:1.3em;
+	font-weight:bold;
+	font-family:consolas;
+	border:none;
+	border-radius:20px;
+	padding:10px 28px;
+	
+	background-color:#4FAFE4;
+}
+.btn-header {
+	color:#3B5998;
+	background-color:white;
+	border-radius:20px;
+	border:1px solid white;
+	padding:10px;
+	
+	font-weight:bold;
+	font-style:italic;
+}
+.btn-main:hover { color:white; background-color:#3B5998 }
+.btn-header:hover { color:white; background-color:#3B5998 }
+
+
+
+/*
+* STATE
+*/
+.hide { display:none }
+.float-right { float:right }
+.margin-none { margin:0 }
+
+
+
+/*
+* QUERIES
+*/
+@media (min-width:560px)
+{
+	.nav { float:right }
+	.nav-link { margin:0 16px }
+}
+@media (max-width:768px)
+{
+
+}
+

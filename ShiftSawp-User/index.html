@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Shift Swap</title>
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+		<script src="js/fbsdk.js"></script>
+		<script src="js/firebase.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/dropdown.js"></script>
+		<script src="js/shiftswap-filter.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+
+
+
+
+<body>
+
+	<!-- HEADER -->
+	<header class="header">
+		<div class="title-margins">
+			<button class="header-icon hide-onlarge btn btn-white" onclick="ShiftSwapUI.ToggleFilters()"><i class="fa fa-bars"></i></button>
+			<span class="header-brand">Shift Swap</span>
+		</div>
+		
+		
+<!-- FILTERS -->
+		<section id="js-filter-container" class="filter-container hide-onsmall">
+			<div class="dropdown dropdown-overlay filter">
+				<h4 class="filter-title">Filter by exchange</h4>
+				<div class="dropdown-toggle dropdown-display btn btn-standard">Any</div>
+				<div>
+					<ul class="dropdown-contents">
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('give')" display-text='Give'>Give</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('trade')" display-text='Trade'>Trade</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('both')" display-text='Both'>Both</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('any')" display-text='Any'>Any</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dropdown dropdown-overlay filter">
+				<h4 class="filter-title">Sort by start time</h4>
+				<div class="dropdown-toggle dropdown-display filter-toggle btn btn-standard">None</div>
+				<div>
+					<ul class="dropdown-contents">
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetTimeSort('start', 1)">
+							Early To Late
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetTimeSort('start', -1)">
+							Late To Early
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.ResetTimeSort()">None</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dropdown dropdown-overlay filter">
+				<h4 class="filter-title">Sort by date</h4>
+				<div class="dropdown-toggle dropdown-display filter-toggle btn btn-standard">None</div>
+				<div>
+					<ul class="dropdown-contents">
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetDateSort(1)">
+							Ascending Order
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetDateSort(-1)">
+							Descending Order
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.ResetDateFilter()">None</li>
+					</ul>
+				</div>
+			</div>
+			<div class="filter">
+				<h4 class="filter-title">Filter by date range</h4>
+				<span class="white">From</span>
+				<span class="btn"><input id="js-startdate-picker" type='text' class='datepicker'></span>
+				<span class="white">to</span>
+				<span class="btn"><input id="js-enddate-picker" type='text' class='datepicker'></span>
+			</div>
+			<button class="filter-button btn btn-white btn-large title-margins" onclick="ShiftSwap.UpdateShifts()">
+				Update
+				<i class="fa fa-refresh"></i>
+			</button>
+		</section>
+		
+		<div>
+			<a class="btn btn-white btn-large">Facebook Group <i class="fa fa-external-link"></i></a>
+			<a class="btn btn-white btn-large">Demo Group <i class="fa fa-external-link"></i></a>
+		</div>
+		
+	</header>
+
+	<!-- MAIN BODY -->
+	<section id="js-main-container" class="main-container">
+		<section id="js-login-container">
+			<h4 id="js-login-message" class="title-light title-margins"></h4>
+			<button id="js-login-button" class="btn btn-large btn-light-blue"onclick=" ShiftSwap.Login()">
+				Login
+				<i class="fa fa-facebook-square"></i>
+			</button>
+			<button class="btn btn-large btn-light-blue" onclick="ShiftSwap.ViewDemo()">View Demo</button>
+		</section>
+
+		<h3 id="js-stats" class="title-light"></h3>
+		
+		<section id="js-shift-container" class="shifts-container">
+		</section>
+	</section>
+	
+	
+	<footer class="footer">
+		<p class="credits">© 2017</p>
+		<p class="credits">Designed and Developed by Thiago HPC</p>
+	</footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

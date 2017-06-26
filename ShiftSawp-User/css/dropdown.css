@@ -1,0 +1,56 @@
+
+
+/*
+*
+* Dropdown HTML Structure
+*
+* <div class="dropdown">
+* 	<h4>Optional Title</h4>
+* 	<div class="dropdown-toggle dropdown-display">Dropdown Display</div>
+* 		<div>
+*		<ul class="dropdown-contents">
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 1'>Option 1</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 2'>Option 2</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 3'>Option 3</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 4'>Option 4</li>
+*		</ul>
+*	</div>
+* </div>
+*
+*
+*
+* <div class="dropdown dropdwon-overlay> removes the "dropdown-contents" box from the flow of the document (using position absolute)
+*
+* [Dropdowns within dropdowns are not permitted]
+*/
+
+
+.dropdown {
+	margin:16px 0;
+}
+.dropdown-toggle {
+	display:inline-block;
+	padding:6px 36px;
+}
+.dropdown-toggle:hover { cursor:pointer }
+.dropdown-contents {
+	padding: 0;
+	list-style: none;
+	border: 1px solid #ccc;
+	background-color: white;
+	margin: 0;
+	display: inline-block;
+}
+.dropdown-option {
+	padding: 6px 32px;
+}
+.dropdown-option:hover { cursor:pointer; background-color:#F5F5F5 }
+
+
+.dropdown-overlay {
+	position:relative;
+}
+.dropdown-overlay .dropdown-contents {
+	position:absolute;
+	z-index:1;
+}
