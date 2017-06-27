@@ -53,7 +53,7 @@ var ShiftData = new function() {
 	var allButtons = $(loginButton).add(getDataButton).add(sendDataButton);
 	
 	var groupID = "273125759419125";
-	var demoGroupID = "1040264609467414";
+	var demoGroupID = "235222210316367";
 
 	
 	/**

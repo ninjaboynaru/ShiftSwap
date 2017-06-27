@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 
 
-
 <html>
 
 	<head>
@@ -10,19 +9,19 @@
 		<title>Shift Swap</title>
 
 		
-		<script src="https://use.fontawesome.com/9dbfdc9abf.js"></script>
 		<link rel="stylesheet" href="css/jquery-ui.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/style.css">
-
-		<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
-		<script src="js/fbsdk.js"></script>
-		<script src="js/firebase.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery-ui.js"></script>
-		<script src="js/dropdown.js"></script>
-		<script src="js/shiftswap-filter.js"></script>
-		<script src="js/index.js"></script>
+		
+		<script src="https://use.fontawesome.com/9dbfdc9abf.js" defer></script>
+		<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js" defer></script>
+		<script src="js/fbsdk.js" defer></script>
+		<script src="js/firebase.js" defer></script>
+		<script src="js/jquery.js" defer></script>
+		<script src="js/jquery-ui.js" defer></script>
+		<script src="js/dropdown.js" defer></script>
+		<script src="js/shiftswap-filter.js" defer></script>
+		<script src="js/index.js" defer></script>
 	</head>
 
 
@@ -38,17 +37,25 @@
 		</div>
 		
 		
-<!-- FILTERS -->
+		<!-- FILTERS -->
 		<section id="js-filter-container" class="filter-container hide-onsmall">
 			<div class="dropdown dropdown-overlay filter">
 				<h4 class="filter-title">Filter by exchange</h4>
 				<div class="dropdown-toggle dropdown-display btn btn-standard">Any</div>
 				<div>
 					<ul class="dropdown-contents">
-						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('give')" display-text='Give'>Give</li>
-						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('trade')" display-text='Trade'>Trade</li>
-						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('both')" display-text='Both'>Both</li>
-						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('any')" display-text='Any'>Any</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('give')">
+							Give
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('trade')" >
+							Trade
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('both')">
+							Both
+						</li>
+						<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this); ShiftSwapFilter.SetExchangeFilter('any')">
+							Any
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -95,11 +102,12 @@
 			</button>
 		</section>
 		
+		<!-- LINKS -->
 		<div>
 			<a class="btn btn-white btn-large" href="https://www.facebook.com/groups/273125759419125/">
 				Facebook Group <i class="fa fa-external-link"></i>
 			</a>
-			<a class="btn btn-white btn-large" href="https://www.facebook.com/groups/1040264609467414/">
+			<a class="btn btn-white btn-large" href="https://www.facebook.com/groups/235222210316367">
 				Demo Group <i class="fa fa-external-link"></i>
 			</a>
 		</div>
@@ -107,10 +115,10 @@
 	</header>
 
 	<!-- MAIN BODY -->
-	<section id="js-main-container" class="main-container">
+	<div id="js-main-container" class="main-container">
 		<section id="js-login-container">
 			<h4 id="js-login-message" class="title-light title-margins"></h4>
-			<button id="js-login-button" class="btn btn-large btn-light-blue"onclick=" ShiftSwap.Login()">
+			<button id="js-login-button" class="btn btn-large btn-light-blue" onclick="ShiftSwap.Login()">
 				Login
 				<i class="fa fa-facebook-square"></i>
 			</button>
@@ -119,9 +127,9 @@
 
 		<h3 id="js-stats" class="title-light"></h3>
 		
-		<section id="js-shift-container" class="shifts-container">
-		</section>
-	</section>
+		<div id="js-shift-container" class="shifts-container">
+		</div>
+	</div>
 	
 	
 	<footer class="footer">
@@ -129,17 +137,6 @@
 		<p class="credits">Designed and Developed by Thiago HPC</p>
 	</footer>
 </body>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

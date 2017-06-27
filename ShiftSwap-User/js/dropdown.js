@@ -63,7 +63,7 @@ var DropdownControl = new function()
 	*/
 	this.SetDropdownDisplay = function(element)
 	{
-		var text = $(element).attr('display-text');
+		var text = $(element).attr('data-display-text');
 		var toggleElement = $(element).parent().siblings('.dropdown-display');
 		if(toggleElement.length == 0)
 		{

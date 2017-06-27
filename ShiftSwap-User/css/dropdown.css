@@ -9,16 +9,20 @@
 * 	<div class="dropdown-toggle dropdown-display">Dropdown Display</div>
 * 		<div>
 *		<ul class="dropdown-contents">
-*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 1'>Option 1</li>
-*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 2'>Option 2</li>
-*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 3'>Option 3</li>
-*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" display-text='Option 4'>Option 4</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" data-display-text='Option 1'>Option 1</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" data-display-text='Option 2'>Option 2</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" data-display-text='Option 3'>Option 3</li>
+*			<li class="dropdown-option" onclick="DropdownControl.SetDropdownDisplay(this);" data-display-text='Option 4'>Option 4</li>
 *		</ul>
 *	</div>
 * </div>
 *
+* //NOTE
+* data-display-text = "..." is optional. 
+* If it is omitted then the text contents of the <li> will copied to the .dropdown-toggle instead of the data-display-text="..." contents
 *
 *
+* //NOTE
 * <div class="dropdown dropdwon-overlay> removes the "dropdown-contents" box from the flow of the document (using position absolute)
 *
 * [Dropdowns within dropdowns are not permitted]
