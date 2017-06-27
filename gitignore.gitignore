@@ -17,7 +17,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-#.exe
+*.exe
 
 # Windows shortcuts
 *.lnk
