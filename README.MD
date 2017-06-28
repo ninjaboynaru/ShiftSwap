@@ -2,7 +2,9 @@
 
 # Shift Swap
 **Shift Swap** is a static front end JavaScript/HTML application run from the users browser that allows
-members of a work group to view and sort *shifts* up for trade/grabs posted in a Facebook group.  
+members of a work group to view and sort *shifts* up for trade/grabs posted in a Facebook group.
+
+![Login page](https://raw.githubusercontent.com/ninjaboynaru/ShiftSwap/master/images/shiftswap-user-img-3.JPG)
 
 A demo FB group is provided for viewing how the app functions (employers, new users).
 
@@ -14,7 +16,8 @@ Posts made on the Facebook group must conform to a syntax/structure.
 Shift swap is divided into 2 applications.
 	- Shift Swap Admin *(Grabs and parses posts in FB group. Uploads to cloud storage)*
 	- Shift Swap User *(Retreives data from cloud storage, filter and sort. Display to user)*
-	
+
+![Admin panel](https://raw.githubusercontent.com/ninjaboynaru/ShiftSwap/master/images/shiftswap-admin-img-2.JPG)
 ---
 
 ### External APIs used
@@ -52,7 +55,8 @@ For the JSON format the posts are parsed into
 > See **_docs/ShiftData_JSON_**
 
 
-
+![Facebook API Logo](https://raw.githubusercontent.com/ninjaboynaru/ShiftSwap/master/images/logo-facebook-api.jpg)
+![Desktop User Site](https://raw.githubusercontent.com/ninjaboynaru/ShiftSwap/master/images/shiftswap-user-img-2.JPG)
 
 
 
