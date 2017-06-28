@@ -180,7 +180,7 @@ var ShiftSwap = new function()
 	*/	
 	this.UpdateShifts = function()
 	{
-		if(shifts.length == 0){ return }
+		if(!shifts || shifts.length == 0){ return }
 		filteredShifts = ShiftSwapFilter.FilterSort(shifts);
 		
 		ShiftSwapUI.ClearShiftTabs();
@@ -208,7 +208,7 @@ var ShiftSwap = new function()
 		{
 			if(typeof shifts[i].date == 'string')
 			{
-				shifts[i].date = new Date(shifts[i].date)
+				shifts[i].date = new Date(shifts[i].date);
 			}
 		}
 	}

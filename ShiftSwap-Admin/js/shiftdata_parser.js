@@ -265,6 +265,11 @@ var ShiftDataParser = new function()
 				if(shift.month != undefined && shift.day != undefined && shift.year == undefined)
 				{
 					//Add the year to the date
+					//Convert to 4 diget year if needed
+					if(String(nextToken.value).length == 2)
+					{
+						nextToken.value = Number("20" + nextToken.value);
+					}
 					shift.year = nextToken.value;
 					i += 1;
 				}
